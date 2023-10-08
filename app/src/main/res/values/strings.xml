@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BMI_kalkylator</string>
+    <string name="Vikt">Skriv in vikt i kg</string>
+    <string name="Längd">Skriv in längd i M t.ex 1.87</string>
+    <string name="knapp_BMI">Beräkna BMI</string>
+    <string name="fel_input">Nu blev det fel...</string>
+    <string name="din_BMI">"Din BMI är: "</string>
+</resources>

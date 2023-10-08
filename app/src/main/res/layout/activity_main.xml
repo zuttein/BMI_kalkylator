@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+
+    <!-- Rutan för användaren att skriva in vikt -->
+
+
+    <EditText
+        android:id="@+id/weightInput"
+        android:layout_width="@dimen/dimensions_tv_width"
+        android:layout_height="@dimen/dimensions_tv_height"
+        android:layout_marginTop="@dimen/margins"
+        android:gravity="center"
+        android:hint="@string/Vikt"
+        android:textSize="@dimen/text_size_inputs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.452" />
+
+    <!-- Rutan för användaren att skriva in längd -->
+
+    <EditText
+        android:id="@+id/lengthInput"
+        android:laimeyout_width="@dn/dimensions_tv_width"
+        android:layout_height="@dimen/dimensions_tv_height"
+        android:layout_marginTop="@dimen/margins"
+        android:gravity="center"
+        android:hint="@string/Längd"
+        android:textSize="@dimen/text_size_inputs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weightInput"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- Titeln -->
+
+
+    <TextView
+        android:id="@+id/BMITitel"
+        android:layout_width="@dimen/dimensions_tv_width"
+        android:layout_height="@dimen/dimensions_tv_height"
+        android:layout_marginBottom="@dimen/margins"
+        android:gravity="center"
+        android:text="@string/knapp_BMI"
+        android:textSize="@dimen/text_size_titel"
+        app:layout_constraintBottom_toTopOf="@+id/weightInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <!-- Knappen -->
+
+    <Button
+        android:id="@+id/BMIButton"
+        android:layout_width="@dimen/dimensions_tv_width"
+        android:layout_height="@dimen/dimensions_tv_height"
+        android:layout_marginTop="@dimen/margins"
+        android:text="@string/knapp_BMI"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lengthInput" />
+
+    <!-- Utskrift av BMI -->
+
+
+    <TextView
+        android:id="@+id/resultOfBMI"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimension_tv_result_height"
+        android:layout_marginTop="@dimen/margins"
+        android:layout_marginBottom="528dp"
+        android:gravity="center"
+        android:text=""
+        android:textSize="@dimen/text_size_titel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageBMI"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <!-- Bilden -->
+
+    <ImageView
+        android:id="@+id/imageBMI"
+        android:layout_width="@dimen/dimensions_tv_width"
+        android:layout_height="@dimen/dimensions_image_height"
+        android:layout_marginBottom="@dimen/margins"
+        app:layout_constraintBottom_toTopOf="@+id/resultOfBMI"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/nedladdning" />
+
+    <!-- Gör en ruta för felaktig inmatning av användare -->
+
+    <TextView
+        android:id="@+id/wrongInput"
+        android:layout_width="@dimen/dimensions_tv_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margins"
+        android:layout_marginBottom="248dp"
+        android:text=""
+        android:textSize="@dimen/text_size_wrong_input"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageBMI"
+        app:layout_constraintVertical_bias="0.476" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
